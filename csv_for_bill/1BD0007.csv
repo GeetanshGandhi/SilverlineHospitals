@@ -1,0 +1,17 @@
+Bill Number,1BD0007
+Patient ID,1AD0007
+Patient Name,jyoti
+Treatment Name,Valve Surgery
+Doctor Name,Dr. Bharat Rawat
+Registration Fees,2000
+Treatment Cost (One time + Daily),50000
+Room Cost,7000
+Service Charges,2000
+Visit Charges,4000
+Surgery Charges,15000
+Insurance Number,None
+Total,78000.0
+Tax,14040.0
+Grand Total,92040.0
+Payment Method,Cheque
+Status(Current),Due

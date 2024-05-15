@@ -1,0 +1,17 @@
+Bill Number,1BD0004
+Patient ID,1AD0004
+Patient Name,Dhruv Gupta
+Treatment Name,Pneumonia
+Doctor Name,Dr. Ravi Doshi
+Registration Fees,2000
+Treatment Cost (One time + Daily),16000
+Room Cost,7000
+Service Charges,2000
+Visit Charges,4000
+Surgery Charges,0
+Insurance Number,gh564354q
+Total,29000.0
+Tax,5220.0
+Grand Total,34220.0
+Payment Method,Cash
+Status(Current),Due

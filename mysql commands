@@ -1,0 +1,31 @@
+create database Silverline_hospital;
+
+use silverline_hospital;
+
+create table patients(Patient_Id varchar(7) PRIMARY KEY, Patient_Name varchar(50), AadharCard_Number varchar(12), MobileNumber_Guardian varchar(10), Treatment_Id varchar(6), insurance_Number varchar(20), Date_Admission date, Doctor_Id varchar(4), Room_Number varchar(5), Bill_Number varchar(7));
+
+create table room_details(Room_Number varchar(5) PRIMARY KEY, Room_Type varchar(20),Room_Cost int, Availability tinyint, Patient_Id varchar(7), Doctor_Id varchar(4));
+
+create table treatment(Treatment_Id varchar(6), Treatment_Name varchar(30),Category varchar(20), Doctor_Id varchar(4),Treatment_Cost int(11), Surgery_Required TINYINT default 0, Surgery_Time_hrs float);
+
+create table doctors(Doctor_Id varchar(4) PRIMARY KEY, Doctor_Name varchar(50), Speciality varchar(20), Visit_Charges int);
+
+create table discharged_patients(Patient_Id varchar(7) PRIMARY KEY, Patient_Name varchar(50), AadharCard_Number varchar(12), Treatment_Id varchar(6), Doctor_Id varchar(4),Doctor_Name varchar(50), MobileNumber_Guardian varchar(10), Date_Admission date, Date_Discharge date, Number_of_Days int, Bill_Number varchar(7));
+
+create table login(User_Id varchar(5) PRIMARY KEY, Password varchar(20), Owner varchar(50));
+
+create table bill_details (Bill_Number varchar(7) primary key,Patient_Id varchar(7),Patient_Name varchar(50),Treatment_Name varchar(30),Treatment_Id varchar(6), Doctor_Id varchar(4), Registeration_Fees int, Treatment_Cost int, Room_Cost int, Service_Charges int, Visit_Charges int, Surgery_Charges int, Insurance_Number varchar(20),Total float,Tax float, Grand_Total float, Payment_Method varchar(20), Status TINYINT);
+
+create table change_transaction(Patient_Id varchar(7), Room_Number varchar(5), Date_of_Change date, Number_of_Days int default 0);
+
+create table bank_details(Title varchar(25), Description varchar(50));
+
+insert into bank_details(Title) values('Bank Name','Indian Bank'),('Branch Name','M. G. Road'),('Branch Number','04241'),('Account Name','Silverline Hospital Pvt. Ltd.'),('IFSC Code','IDBI00J028'),('U.P.I. ID','9526653715@indianbank');
+
+insert into login values('Adm01', 'silver2525', 'Dhruv Gupta'),
+('Adm02', 'silver7056', 'Shaan Jain'),
+('Adm03', 'silver1980', 'Arnav Rajawat'),
+('Adm04', 'silver4895', 'Akshar Varma'),
+('Adm05', 'silver2509', 'Geetansh Gandhi'),
+('Adm06', 'silver2732', 'Aarush Garg');
+
